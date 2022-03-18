@@ -2,9 +2,7 @@
   <v-app>
     <v-main>
       <v-container>
-        <transition name="slide" mode="out-in">
           <router-view></router-view>
-        </transition>
       </v-container>
     </v-main>
   </v-app>
