@@ -1,6 +1,8 @@
 <template>
   <v-app>
+    <AppTopBar/>
     <v-main>
+      
       <v-container>
         <transition name="slide" mode="out-in">
           <router-view></router-view>
@@ -11,10 +13,16 @@
 </template>
 
 <script>
+
+import AppTopBar from "./components/AppTopBar.vue";
+
 export default {
   name: "App",
-  data: () => ({
+  components: {
+    AppTopBar,
+  }
+  // data: () => ({
     //
-  }),
+  // }),
 };
 </script>
