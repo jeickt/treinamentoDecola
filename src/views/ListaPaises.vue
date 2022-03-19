@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Paises",
+  name: "ListaPaises",
 };
 </script>
 
