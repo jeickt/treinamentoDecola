@@ -20,6 +20,15 @@
       >
         Cadastrar-se</v-btn
       >
+      <v-btn
+        @click="nologin"
+        color="teal lighten-1"
+        elevation="2"
+        medium
+        outlined
+        rounded
+        >Login</v-btn
+      >
     </div>
   </div>
 </template>
@@ -47,10 +56,8 @@ img {
 .botoes {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-}
-p {
-  text-justify: auto;
+  justify-content: space-between;
+  row-gap: 6px;
 }
 </style>
 
