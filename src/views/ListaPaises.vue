@@ -10,7 +10,7 @@
             ></v-pagination>
         <div v-for="(pais, index) of listaPaises" :key="pais.name.common">
             <v-card v-if="((index < page * 10) &&(index > page * 10 - 11))"
-                class="mx-auto mt-5 blue-grey lighten-5 pa-md-4 mx-lg-auto"
+                :class="{'mx-auto mt-5 pa-md-4 mx-lg-auto':true, 'blue-grey lighten-5': dark}"
                 max-width="344"
                 
             >
