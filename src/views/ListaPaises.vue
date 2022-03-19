@@ -1,15 +1,12 @@
 <template>
-    <h1>Lista de paises</h1>
-    
-    
+  <h1>Lista de paises</h1>
 </template>
 
 <script>
 export default {
-    name: 'Paises'
-}
+  name: "Paises",
+};
 </script>
 
 <style>
-
 </style>
