@@ -26,7 +26,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="git/ListaPaises">
+          <router-link to="/ListaPaises">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-earth</v-icon>
