@@ -20,9 +20,9 @@ export default {
   name: "App",
   components: {
     AppTopBar,
-  }
-  // data: () => ({
+  },
+  data: () => ({
     //
-  // }),
+   }),
 };
 </script>
