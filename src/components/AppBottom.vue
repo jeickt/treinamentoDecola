@@ -9,7 +9,7 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="//ListaPaises">
+      <router-link to="/ListaPaises">
         <v-btn icon>
           <v-icon>mdi-earth</v-icon>
         </v-btn>
