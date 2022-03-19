@@ -1,15 +1,19 @@
 <template>
   <v-card class="appBottom" color="grey lighten-4" flat height="60px" tile>
     <v-toolbar>
-      <v-btn icon>
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
+      <router-link to="/">
+        <v-btn icon>
+          <v-icon>mdi-home</v-icon>
+        </v-btn>
+      </router-link>
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-earth</v-icon>
-      </v-btn>
+      <router-link to="/ListaPaises">
+        <v-btn icon>
+          <v-icon>mdi-earth</v-icon>
+        </v-btn>
+      </router-link>
 
       <v-spacer></v-spacer>
 

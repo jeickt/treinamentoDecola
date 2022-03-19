@@ -4,104 +4,31 @@
     <img
       src="https://www.objetivojuazeiro.com.br/robots/wp-content/themes/robots2020/images/modalidades/earth.gif"
     />
-    <p></p>
+    <p>
+      O presente projeto visa O presente projeto visa O presente projeto visa O
+      presente projeto visa O presente projeto visa O presente projeto visa O
+      presente projeto visa O presente projeto visa O presente projeto visa
+    </p>
     <div class="botoes">
       <v-btn
-        @click="push"
-        class="botaoInicio"
+        @click="delay"
         color="teal lighten-1"
         elevation="2"
         medium
         outlined
         rounded
-        :disabled="loading"
       >
-        {{ loading ? "LOADING..." : "Teste" }}
-      </v-btn>
+        Cadastrar-se</v-btn
+      >
       <v-btn
-        @click="push"
-        class="botaoInicio"
+        @click="nologin"
         color="teal lighten-1"
         elevation="2"
         medium
         outlined
         rounded
-        :disabled="loading"
+        >Login</v-btn
       >
-        {{ loading ? "LOADING..." : "Botao2" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao3" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao4" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao5" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao6" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao7" }}
-      </v-btn>
-      <v-btn
-        @click="push"
-        class="botaoInicio"
-        color="teal lighten-1"
-        elevation="2"
-        medium
-        outlined
-        rounded
-        :disabled="loading"
-      >
-        {{ loading ? "LOADING..." : "Botao8" }}
-      </v-btn>
     </div>
   </div>
 </template>
@@ -113,10 +40,13 @@ export default {
     return {};
   },
   methods: {
-    push() {
+    nologin: function () {
+      alert("Você não tem login conosco, clique em CADASTRAR-SE");
+    },
+    delay() {
       setTimeout(() => {
-        this.loading = false;
-      }, 1000);
+        this.$router.push("/telacadastro");
+      }, 100);
     },
   },
 };
@@ -129,5 +59,10 @@ img {
 .botoes {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  row-gap: 6px;
 }
 </style>
+
+
+
