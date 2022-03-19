@@ -1,10 +1,18 @@
 <template>
     <v-container>
         <h1>Lista de paises</h1>
-        <div v-for="pais of listaPaises" :key="pais.name.common">
-            <v-card
-                class="mx-auto mt-5 blue-grey lighten-5"
+        <v-pagination
+              v-model="page"
+              class="my-4"
+              :length="15"
+              :total-visible="6"
+              :lenght="25"
+            ></v-pagination>
+        <div v-for="(pais, index) of listaPaises" :key="pais.name.common">
+            <v-card v-if="((index < page * 10) &&(index > page * 10 - 11))"
+                class="mx-auto mt-5 blue-grey lighten-5 pa-md-4 mx-lg-auto"
                 max-width="344"
+                
             >
                 <v-img
                 :src="pais.flags.png"
@@ -64,6 +72,8 @@ export default {
         return{
             listaPaises: [],
             show: false,
+            page: 1,
+            maxPages: 0
         }
     },
     created(){
@@ -71,10 +81,11 @@ export default {
             .then(resposta => resposta.json())
             .then(json => {
                 this.listaPaises = json
-                console.log(this.listaPaises[0])
+                console.log(this.listaPaises)
+                this.maxPages = Math.ceil(this.listaPaises.length / 10)
             })
+            console.log(this.maxPages)
     },
-
 }
 </script>
 
