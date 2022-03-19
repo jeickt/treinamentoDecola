@@ -40,6 +40,9 @@ export default {
     return {};
   },
   methods: {
+    nologin: function () {
+      alert("Você não tem login conosco, clique em CADASTRAR-SE");
+    },
     delay() {
       setTimeout(() => {
         this.$router.push("/telacadastro");
